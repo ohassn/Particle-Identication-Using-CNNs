@@ -7,13 +7,9 @@ from torch.utils.data import DataLoader
 import torchvision
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
-# import matplotlib.pyplot as plt
 import os
 import random
-import MinkowskiEngine as ME
 
-# import ocnn
-# from torch.utils.tensorboard import SummaryWriter
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
 
@@ -63,7 +59,6 @@ test_loader = DataLoader(dataset=test_dataset, batch_size=batch_size, shuffle=Tr
 
 # Initialize Network
 model = CNN().to(device) 
-# model.double()
 
 # Loss and Optimizer
 criterion = nn.CrossEntropyLoss()
@@ -72,9 +67,6 @@ optimizer = optim.Adam(model.parameters(), learning_rate)
 
 def get_num_correct(preds, labels):
     return preds.argmax(dim=1).eq(labels).sum().item()
-
-
-# tb = SummaryWriter() ([], 0)
 
 loss_vals = []
 
@@ -105,12 +97,6 @@ for epoch in range(num_epochs):
         epoch_loss.append(loss.item())
     loss_vals.append(sum(epoch_loss)/len(epoch_loss))
     print(f'Epoch: {epoch}, Loss: {sum(epoch_loss)/len(epoch_loss)}')
-
-    # tb.add_scalar("Loss", total_loss, epoch)
-    # tb.add_scalar("Correct", total_correct, epoch)
-    # tb.add_scalar("Accuracy", total_correct / len(train_dataset), epoch)
-
-# tb.close()
 
 model.eval()
 
