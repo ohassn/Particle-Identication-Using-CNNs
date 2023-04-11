@@ -23,9 +23,9 @@ Enter nightly:
 Generate data, as an example:
 
 ```
-npsim --compact epic.xml --enableGun --gun.particle "e-" --gun.energy "5*GeV" --gun.thetaMin "3*deg" 
---gun.thetaMax "50*deg" --gun.phiMin "50*deg" --gun.phiMax "85*deg" --gun.distribution "cos(theta)" 
---numberOfEvents 100000 --outputFile e-_5GeV_20deg_22deg_1e5.edm4hep.root
+npsim --compact epic.xml --enableGun --gun.particle "e-" --gun.energy "5*GeV" --gun.thetaMin "3*deg" --gun.thetaMax "50*deg" 
+--gun.phiMin "50*deg" --gun.phiMax "85*deg" --gun.distribution "cos(theta)" --numberOfEvents 100000 
+--outputFile e-_5GeV_20deg_22deg_1e5.edm4hep.root
 ```
 
 ## 2) Data filtration
