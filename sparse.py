@@ -1,4 +1,4 @@
-# Part of the code comes from https://github.com/NVIDIA/MinkowskiEngine/blob/master/examples/training.py
+# Code based on https://github.com/NVIDIA/MinkowskiEngine/blob/master/examples/training.py
 #
 # We cite "4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural Networks", 
 # CVPR'19 (https://arxiv.org/abs/1904.08755).
